@@ -169,3 +169,61 @@
 // let cao = new PetStore();
 
 // cao.makeSomeSounds();
+
+/**
+ * OTHER MODIFIERS
+ */
+
+/**
+ * Static
+ */
+
+// class Dog {
+//   static species = "Canis Familiaris";
+//   age = 10;
+// }
+
+// class PetStore {
+//   printSpecies(): void {
+//     console.log(Dog.species) // => "Canis Familiaris";
+//     console.log(Dog.age) // undefined;
+//   }
+// }
+
+// console.log(Dog.species);
+
+/**
+ * Readonly
+ */
+
+// class Dog {
+//   static readonly species = "Canis Familaris";
+// }
+
+// class PetStore {
+//   printSpecies(): void {
+//     console.log(Dog.species); // => 'Canis Familaris'
+//     Dog.species = "Terdus Maximus"; // => NOT ALLOWED
+//   }
+// }
+
+/**
+ * Abstract
+ */
+
+// abstract class Animal {
+//   protected age_: number;
+//   abstract getRelativeAge(): number;
+// }
+
+// class Dog extends Animal {
+//   getRelativeAge(): number {
+//     return this.age_ * 7;
+//   }
+// }
+
+// class Cat extends Animal {
+//   getRelativeAge(): number {
+//     return this.age_ * 6;
+//   }
+// }
