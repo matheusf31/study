@@ -1,0 +1,37 @@
+POSTGRES + DOCKER:
+
+para conectar pelo terminal:
+  $ docker exec -it studydatabase psql -d postgres -U postgres
+  [-W...]
+
+onde:
+  docker exec -it -> executa um comenado no container
+  psql -> roda o comando psql
+  -d postgres -> conecta a database com nome postgres (pode ser qualquer nome)
+  -U postgres -> conecta com o usuário postgres (superuser)
+  -W -> utiliza a senha do usuário para fazer a conexão
+
+criar uma database:
+  postgres=# CREATE DATABASE api;
+
+apagar uma database:
+  postgres=# DROP DATABASE databasename;
+  (se tiver alguem usando uma base de dados é só reiniciar o container)
+
+criar um role
+  postgres=# CREATE ROLE me WITH LOGIN PASSWORD 'password';
+
+apagar uma role (grupo):
+  postgres=# DROP ROLE role_name;
+
+alterar para o role:
+  postgres=# ALTER ROLE me CREATEDB;
+  postgres=# \du
+
+criar uma table:
+
+CREATE TABLE users (
+  ID SERIAL PRIMARY KEY,
+  name VARCHAR(30),
+  email VARCHAR(30)
+);
